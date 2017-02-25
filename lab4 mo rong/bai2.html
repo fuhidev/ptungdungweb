@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+	window.onload = function(){
+		var ma = prompt("Ma SV:","")
+		var hten = prompt("Ho Ten:","")
+		var lop = prompt("Lop:","")
+		
+		var tr = document.getElementById("data")
+		tr.innerHTML += "<td>"+ma+"</td><td>"+hten+"</td><td>"+lop+"</td>"
+	}
+    </script>
+</head>
+<body>
+	
+	<table>
+		<caption> DANH SÁCH SINH VIÊN</caption>
+		<tr>
+			<th>Mã SV</th>
+			<th>Họ tên</th>
+			<th>Lớp</th>
+		</tr>
+		<tr id="data"></tr>
+	</table>
+</body>
+</html>

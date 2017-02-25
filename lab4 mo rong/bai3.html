@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+	<script>
+		//setTimealert("Treng lên tới đỉnh rồi kìa, nói chi thì nói e dzìa kẻo khia")
+		function test(img){
+		img.src = "img/love1.gif";
+		}
+			setInterval(function(){alert("Treng lên tới đỉnh rồi kìa, nói chi thì nói e dzìa kẻo khia")},5000)
+			
+			setTimeout(function(){alert("OK Lun")},20000)
+	</script>
+	
+	
+</head>
+<body>
+	<img src="img/love.gif" alt="love" onmouseover="test(this)" onmouseout="this.src='img/love.gif'" />
+</body>
+</html>
