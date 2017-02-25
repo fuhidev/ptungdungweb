@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+	function KTra(){
+	var soKyTu = document.getElementById('soKyTu')
+	var length = document.getElementById('textare').value.length
+	
+	if(length > 200)
+		alert('Bạn đã gõ quá số ký tự cho phép !')
+	else
+		soKyTu.value = length
+		
+	}
+		
+    </script>
+</head>
+<body>
+	<input type="number" id="soKyTu"/>
+	<textarea id="textare" name="ND" cols=”50” rows="10" onKeyUp="KTra();"> </textarea>
+</body>
+</html>

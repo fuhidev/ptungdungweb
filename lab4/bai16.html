@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+	function sc(){
+	var mauNen = document.getElementById('maunen').value
+	var mauChu = document.getElementById('mauchu').value
+	var tieuDe = document.getElementById('tieude').value
+	var trangthai = document.getElementById('trangthai').value
+	
+	document.bgColor = mauNen
+	document.style.color = mauChu
+	document.title = tieuDe
+	document.status = trangthai
+	}
+		
+    </script>
+</head>
+<body>
+	Nhap vao cac gia tri va nhan nut thay doi<br>
+	<input type="text" id="maunen"/><br>
+	<input type="text" id="mauchu"/>  <input type="text" id="tieude"/> <br>
+	<input type="text" id="trangthai"/><br>
+	<input type="button" value="Thay đổi" 
+	onClick="sc()"/>
+	
+</body>
+</html>
