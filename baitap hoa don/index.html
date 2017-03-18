@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css"  href="css/style.css">
+	<script src="js/main.js"></script>
+	
+</head>
+<body>
+<div class="header">
+   
+</div>
+
+<div class="content">
+ <h2> Thực đơn ăn sáng </h2>
+<table width="100%" border="solid blue">
+        <tr>
+            <th> Thức ăn </th>
+            <th> Nước giải khác </th>
+            <th> Dịch Vụ khác </th>
+        </tr>
+        <tr >
+                <td>
+                    <select id="thucan" multiple>
+                        
+                    </select>
+                </td>
+                <td>
+                    <select id="nuoc" multiple>
+                      
+                    </select>
+                </td>
+                <td id="dichvu" >
+
+                   
+                </td>
+            </tr>
+        </tr>
+
+        <tr>
+            <td id="wtfhoadon" colspan="3"><p>Hóa đơn tính tiền</p></td>
+        </tr>
+        <tr>
+            <th colspan="3">
+				<table id="tableChild" border="1px solid red">
+				</table>
+            </th>
+        </tr>
+        <tr>
+        <td colspan="3" style="text-align: center"><button onClick="tinh_tien()">In hóa đơn tính tiền</button></td>
+        </tr>
+
+</table>
+</div>
+</body>
+</html>

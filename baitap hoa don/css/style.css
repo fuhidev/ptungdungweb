@@ -1,0 +1,35 @@
+.content{
+	width:600px;
+	margin:0 auto;
+}
+h2{
+	text-align:center;
+	color:red;
+}
+table th{
+	color:blue;
+}
+#dichvu{
+	color:blue;
+}
+#wtfhoadon{
+color:red;
+}
+button{
+	background-color:red;
+	color:white;
+}
+table{
+	border-collapse:collapse;
+}
+select{
+	width:100%;
+}
+#tableChild{
+	color:black;
+	width:400px;
+	margin:0 auto;
+}
+#tableChild caption,.price{
+	color:red;
+}
