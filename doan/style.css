@@ -1,0 +1,35 @@
+
+.workspace {
+    float:left;
+    height: 100%;
+    width: 50%;
+    display: inline;
+}
+
+.preview {
+    float:right;
+    width: 50%;
+    height: 100%;
+}
+
+#slider {
+    height: 50%;
+}
+
+#coder {
+    height: 50%;
+    width: 100%;
+}
+
+.left {
+    width: 30px;
+    float:left;
+}
+
+.right {
+    float:right;
+}
+
+#view {
+    height: 100%;
+}
