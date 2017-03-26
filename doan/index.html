@@ -3,8 +3,9 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="editor.js"></script>
 
+
+    <script src="editor.js"></script>
     <!--    Slide-->
     <link rel="stylesheet" href="css/slide.css">
     <script src="js/slider.js"></script>
@@ -16,16 +17,12 @@
     <div class="workspace">
         <div id="slider">
             <div class="content" style="max-width:800px">
-
             </div>
-
             <div class="center">
                 <div class="section">
-                    <button class="button" onclick="plusDivs(-1)">❮ Prev</button>
-                    <button class="button" onclick="plusDivs(1)">Next ❯</button>
-                </div>
-                <div id="dots">
-               
+                    <button id="prev" class="left" onclick="plusDivs(-1)">❮ Prev</button>
+                    <span id="numslide">1/12</span>
+                    <button id="next" class="right" onclick="plusDivs(1)">Next ❯</button>
                 </div>
             </div>
         </div>
@@ -34,5 +31,14 @@
     <div class="preview">
         <div id="view"></div>
     </div>
+    <script>
+         loadImage(imgs);
+    showDivs(slideIndex);
+        var code = document.getElementById('coder');
+    var view = document.getElementById('view');
+    code.onkeyup = function (event) {
+        view.innerHTML = code.value;
+    };
+    </script>
 </body>
 </html>

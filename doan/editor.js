@@ -1,12 +1,6 @@
-window.onload = function () {
+function checkCoder(re) {
     "use strict";
-    var code = document.getElementById('coder');
-    var view = document.getElementById('view');
-    code.onkeyup = function (event) {
-        view.innerHTML = code.value;
-    };
-};
-function checkCode(regex) {
-    "use strict";
-    sessionStorage;
+    var value = document.getElementById('coder').value;
+    var result = re.test(value);
+ return result;
 }

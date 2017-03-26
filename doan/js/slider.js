@@ -1,13 +1,30 @@
-var slideIndex = 1;
-var imgs = [];
+var slideIndex = 1,
+    check = [12, 14, 19, 23, 27],
+    check =[
+        {
+            id:12,
+            re:/^(<h1>)(\w?)+(<\/h1>)$/
+        },
+        {
+            id:14,
+            re:undefined
+        },
+        {
+            id:19,
+            re:undefined
+        },
+        {
+            id:23,
+            re:undefined
+        },
+        {
+            id:27,
+            re:undefined
+        }
+    ]
+    imgs = [];
 for (var i = 1; i <= 29; i++) {
     imgs.push('img/lession/1/' + i + '.jpg');
-}
-window.onload = function () {
-
-    loadImage(imgs);
-    loadDots(imgs.length);
-    showDivs(slideIndex);
 }
 
 function loadImage(images) {
@@ -22,17 +39,14 @@ function loadImage(images) {
 
 }
 
-function loadDots(num) {
-    var dot = document.getElementById('dots');
-    for (var i = 1; i <= num; i++) {
-        var btn = document.createElement('button');
-        btn.className = "button demo";
-        btn.innerText = i;
-        btn.onclick = 'currentDiv('+i+')';
-        dot.appendChild(btn);
+function contains(a, obj) {
+    for (var i = 0; i < a.length; i++) {
+        if (a[i] === obj) {
+            return true;
+        }
     }
+    return false;
 }
-
 function plusDivs(n) {
     showDivs(slideIndex += n);
 }
@@ -44,19 +58,22 @@ function currentDiv(n) {
 function showDivs(n) {
     var i;
     var x = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("demo");
-    if (n > x.length) {
-        slideIndex = 1
+    if (n > x.length || n < 1) {
+        return;
     }
     if (n < 1) {
         slideIndex = x.length
     }
+    if(contains(check,n)){
+       if(!checkCoder()) document.getElementById('next').style.visibility="hidden";
+
+    }else{
+        document.getElementById('next').style.visibility="";
+    }
     for (i = 0; i < x.length; i++) {
         x[i].style.display = "none";
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" red", "");
-    }
     x[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " red";
+    var span = document.getElementById('numslide');
+    span.innerText = [slideIndex, '/', imgs.length].join('');
 }
