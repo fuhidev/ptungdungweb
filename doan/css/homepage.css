@@ -1,0 +1,1634 @@
+@-webkit-keyframes pulseTab {
+    0% {
+        opacity: 1
+    }
+    50% {
+        opacity: 0.5
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-moz-keyframes pulseTab {
+    0% {
+        opacity: 1
+    }
+    50% {
+        opacity: 0.5
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeRight {
+    0% {
+        opacity: 0;
+        left: -40px
+    }
+    35% {
+        opacity: 0;
+        left: -40px
+    }
+    100% {
+        opacity: 1;
+        left: 0px
+    }
+}
+
+@-moz-keyframes fadeRight {
+    0% {
+        opacity: 0;
+        left: -40px
+    }
+    35% {
+        opacity: 0;
+        left: -40px
+    }
+    100% {
+        opacity: 1;
+        left: 0px
+    }
+}
+
+@-webkit-keyframes fadeLeft {
+    0% {
+        opacity: 0;
+        left: 40px
+    }
+    35% {
+        opacity: 0;
+        left: 40px
+    }
+    100% {
+        opacity: 1;
+        left: 0px
+    }
+}
+
+@-moz-keyframes fadeLeft {
+    0% {
+        opacity: 0;
+        left: 40px
+    }
+    35% {
+        opacity: 0;
+        left: 40px
+    }
+    100% {
+        opacity: 1;
+        left: 0px
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    75% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    75% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeSlow {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-moz-keyframes fadeSlow {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes floatUpOne {
+    0% {
+        bottom: -100px;
+        opacity: 1;
+        -webkit-transform: rotate(0deg) scale(0)
+    }
+    33% {
+        -webkit-transform: rotate(66deg) scale(0.25)
+    }
+    66% {
+        -webkit-transform: rotate(132deg) scale(0.5)
+    }
+    100% {
+        opacity: 1;
+        bottom: 120%;
+        -webkit-transform: rotate(200deg) scale(0)
+    }
+}
+
+@-webkit-keyframes floatUpTwo {
+    0% {
+        bottom: -100px;
+        opacity: 1;
+        -webkit-transform: rotate(0deg) scale(1)
+    }
+    33% {
+        -webkit-transform: rotate(-66deg) scale(1.5)
+    }
+    100% {
+        opacity: 1;
+        bottom: 120%;
+        -webkit-transform: rotate(-200deg) scale(0)
+    }
+}
+
+@-webkit-keyframes floatUpThree {
+    0% {
+        bottom: -100px;
+        opacity: 1;
+        -webkit-transform: rotate(0deg) scale(1)
+    }
+    33% {
+        -webkit-transform: rotate(66deg) scale(1.3)
+    }
+    100% {
+        opacity: 1;
+        bottom: 120%;
+        -webkit-transform: rotate(300deg) scale(0)
+    }
+}
+
+@font-face {
+    font-family: 'pf-din';
+    font-weight: bold;
+    font-style: normal;
+    src: url(//ga-dash.s3.amazonaws.com/production/assets/pfdin-2c74ac760ab560c1ef80d525bfeba7ef096420ae1d4e7ef4aefa47eeb365393f.woff) format("woff")
+}
+
+@font-face {
+    font-family: 'pf-din-light';
+    font-weight: normal;
+    font-style: normal;
+    src: url(//ga-dash.s3.amazonaws.com/production/assets/pfdin-light-50236350879f5070bca281e5d2a53e01b5a5e3af0f29331d943f0b6c857173f1.woff) format("woff")
+}
+
+@font-face {
+    font-family: 'news';
+    src: url(//ga-dash.s3.amazonaws.com/production/assets/news-c06c6f13699a54b457acacfc2b3577bff18364ed5d2227d8e731b264c533aaa3.woff)
+}
+
+@font-face {
+    font-family: 'iconic';
+    src: url(//ga-dash.s3.amazonaws.com/production/assets/iconic-2521c85c170553701d5e46ed41c13554b94aea1d78b23a4df55ee5ce1ce0a85e.woff)
+}
+
+html {
+    background: #000;
+    color: #ddd;
+    font-family: sans-serif
+}
+
+body {
+    margin: 0;
+    padding: 0
+}
+
+p,
+li,
+a,
+label,
+em {
+    font-family: "news", Georgia, serif;
+    text-decoration: none
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "pf-din", Impact, sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #ddd
+}
+
+a {
+    color: #FF2500;
+    text-decoration: none
+}
+
+.brand {
+    height: 50px;
+    background: url(//ga-dash.s3.amazonaws.com/production/assets/logo-0901a3c8466759400ecb1fd4ce0cfcc115d9a227a8ed64940284762f35a0ff15.png) no-repeat;
+    background-size: 20px;
+    color: #fff;
+    font-family: "news", Georgia, serif;
+    display: inline-block;
+    margin: 7px 0 0 10px;
+    font-size: 24px;
+    background-position: 4px 3px;
+    padding: 0 30px
+}
+
+.subtitle {
+    color: #888;
+    margin-top: 3px
+}
+
+* {
+    -webkit-font-smoothing: antialiased
+}
+
+#editor * {
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.clearfix {
+    clear: both
+}
+
+.relative-container {
+    position: relative
+}
+
+hr {
+    border: 0;
+    background: #444;
+    height: 2px;
+    margin: 25px 0
+}
+
+.hr-lock {
+    position: absolute;
+    margin-left: -25px;
+    top: -15px;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background: #262626 url(//ga-dash.s3.amazonaws.com/production/assets/lock-0e28068913138f6b06a40fe0c2b05e21a1246194d3105cb582b7b443fcfdda10.png) no-repeat;
+    background-size: 30px;
+    background-position: 50% 0
+}
+
+header {
+    height: 40px;
+    margin-bottom: 50px
+}
+
+header .brand {
+    margin: 7px 0 0 10px;
+    font-size: 24px;
+    background-position: 4px 3px;
+    padding: 0 30px;
+    float: left
+}
+
+header .current-user {
+    float: right;
+    margin: 30px 12px
+}
+
+header .current-user p {
+    display: inline-block;
+    margin-top: 0;
+    position: relative;
+    bottom: 10px;
+    color: #888
+}
+
+header .current-user .user-image {
+    height: 40px;
+    width: 40px;
+    margin-right: 5px;
+    position: relative;
+    top: 6px;
+    border-radius: 100%
+}
+
+header .current-user .user-username {
+    font-size: 18px;
+    font-family: "pf-din", Impact, sans-serif;
+    text-transform: uppercase
+}
+
+header .logout {
+    margin: 10px 15px 0 0;
+    color: #888;
+    background: #393939;
+    border-bottom: 2px solid #262626;
+    font-family: "pf-din", Impact, sans-serif;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    font-size: 16px;
+    float: right
+}
+
+header .logout:hover {
+    color: #ccc;
+    background: #444
+}
+
+.flash {
+    position: absolute;
+    top: 15px;
+    width: 480px;
+    left: 50%;
+    margin-left: -250px;
+    padding: 10px;
+    font-size: 22px;
+    color: white;
+    font-family: "pf-din", Impact, sans-serif;
+    text-transform: uppercase
+}
+
+.flash.flash-error {
+    background: #FF2500
+}
+
+.flash.flash-notice {
+    background: #00C7C1
+}
+
+#home-bg {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+    background: url(//ga-dash.s3.amazonaws.com/production/assets/bg-6a1d2e2266a68f2302176cbeb46f14cbd840c432d22a653c3cac2a980cbc5f52.jpg) no-repeat;
+    background-size: cover;
+    background-position: 0 130px
+}
+
+#home-bg.soon {
+    -webkit-filter: blur(5px)
+}
+
+.login {
+    position: absolute;
+    top: -5px;
+    right: 8px;
+    font-size: 18px;
+    color: #888;
+    font-family: "pf-din", Impact, sans-serif;
+    text-transform: uppercase
+}
+
+.login a {
+    font-family: "pf-din", Impact, sans-serif;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: #888;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s
+}
+
+.login a:hover {
+    color: #FF2500
+}
+
+#home {
+    opacity: 1;
+    text-align: center
+}
+
+#home #ga {
+    position: absolute;
+    bottom: 10px;
+    opacity: 0.75;
+    left: 50%;
+    margin-left: -75px
+}
+
+#home #ga p {
+    margin: 10px;
+    font-size: 12px
+}
+
+#home #ga img {
+    width: 150px
+}
+
+#home h1,
+#home a,
+#home p {
+    color: #fff
+}
+
+#home h1 {
+    font-family: "pf-din", Impact, sans-serif;
+    text-transform: uppercase;
+    font-size: 140px;
+    line-height: 140px;
+    margin: 40px 0 0 0;
+    position: relative
+}
+
+#home p {
+    font-family: "news", Georgia, serif;
+    font-size: 22px;
+    margin: 10px auto 40px auto;
+    color: #ccc
+}
+
+#home p.tiny {
+    font-size: 13px;
+    color: #ccc
+}
+
+#home p.tiny a {
+    color: white;
+    text-decoration: underline
+}
+
+#home p.tiny a:hover {
+    color: #FF2500
+}
+
+#home p .brand {
+    font-family: 'News';
+    font-size: 1.25em;
+    padding-right: 3px;
+    padding-left: 30px;
+    background: url(//ga-dash.s3.amazonaws.com/production/assets/logo-0901a3c8466759400ecb1fd4ce0cfcc115d9a227a8ed64940284762f35a0ff15.png) no-repeat;
+    background-size: 26px 26px;
+    background-position: 0px 2px;
+    position: relative;
+    top: 1px;
+    color: #fff
+}
+
+#home .signup {
+    display: inline-block;
+    font-family: "pf-din", Impact, sans-serif;
+    font-size: 28px;
+    text-decoration: none;
+    margin: 0 10px;
+    box-shadow: 0px 1px 5px #000;
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    -ms-transition: background-color 0.2s;
+    -o-transition: background-color 0.2s;
+    text-align: center
+}
+
+#home .signup.twitter {
+    background: #00b6b0 url(//ga-dash.s3.amazonaws.com/production/assets/twitter-9e9e373c1d8dd6d6ba3f2f9d0c03e385e900e04a5473eb8b1e545aed881f538a.png) no-repeat;
+    padding: 15px 25px 15px 55px;
+    border-bottom: 5px solid #00838e;
+    background-size: 45px;
+    background-position: 10px
+}
+
+#home .signup.twitter:hover {
+    background-color: #00a59f
+}
+
+#home .signup.email {
+    background: #FF2500 no-repeat;
+    padding: 15px 25px;
+    border-bottom: 5px solid #c20027
+}
+
+#home .signup.email:hover {
+    background-color: #c20027
+}
+
+#home .signup.email .icon-mail {
+    font-family: 'iconic';
+    font-size: 25px;
+    position: relative;
+    bottom: 2px;
+    right: 3px
+}
+
+#home .signup.tumblr {
+    background: #365471 url(//ga-dash.s3.amazonaws.com/production/assets/tumblr_logo_white_128-4ead669083e8e684c8ac99d25a47548cd52013ad90f954c8f5c4e8df50c57b47.png) no-repeat;
+    padding: 15px 25px 15px 55px;
+    border-bottom: 5px solid #2C4762;
+    background-size: 45px;
+    background-position: 10px
+}
+
+#home .signup.tumblr:hover {
+    background-color: #2C4762
+}
+
+#home .signup.beta {
+    background: #FF2500 url(//ga-dash.s3.amazonaws.com/production/assets/twitter-9e9e373c1d8dd6d6ba3f2f9d0c03e385e900e04a5473eb8b1e545aed881f538a.png) no-repeat;
+    padding: 15px 35px 15px 75px;
+    background-size: 65px;
+    background-position: 10px;
+    border-bottom: 5px solid #c20027;
+    font-size: 38px
+}
+
+#home .signup.beta:hover {
+    background-color: #dd0300
+}
+
+#home .login {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: #fff;
+    background: #888;
+    font-family: "pf-din", Impact, sans-serif;
+    text-transform: uppercase;
+    padding: 10px 15px
+}
+
+#home .login:hover {
+    background: #00C7C1
+}
+
+#home .blurbs {
+    margin: 100px auto 20px auto;
+    width: 90%
+}
+
+#home .blurbs .blurb-text {
+    font-family: "news", Georgia, serif;
+    quotes: "“" "”" "‘" "’";
+    font-size: 15px;
+    line-height: 20px
+}
+
+#home .blurbs .blurb-byline {
+    font-size: 12px;
+    margin: 5px
+}
+
+#home .blurbs .blurb-byline strong {
+    font-size: 20px;
+    display: block;
+    font-family: "pf-din", Impact, sans-serif;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 5px
+}
+
+#home .blurbs .blurb-img {
+    border-radius: 100%;
+    width: 75px;
+    margin: 0 15px 20px 15px
+}
+
+#home .blurbs .blurb {
+    bottom: 20px;
+    display: inline-block;
+    width: 420px;
+    vertical-align: top
+}
+
+#home .blurbs .blurb.blurb-alexis {
+    text-align: left;
+    left: 20px;
+    float: left
+}
+
+#home .blurbs .blurb.blurb-alexis .blurb-img {
+    float: left
+}
+
+#home .blurbs .blurb.blurb-kathy {
+    text-align: right;
+    float: right;
+    right: 20px
+}
+
+#home .blurbs .blurb.blurb-kathy .blurb-img {
+    float: right
+}
+
+#home .video {
+    font-size: 15px;
+    opacity: 0.4;
+    line-height: 24px;
+    display: inline-block
+}
+
+#home .video img {
+    width: 57px;
+    height: 57px
+}
+
+#home .video:hover {
+    opacity: 1
+}
+
+.video-embed {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    text-align: center
+}
+
+.video-embed iframe {
+    margin: 110px auto 0 auto;
+    width: 750px;
+    height: 450px
+}
+
+.fadeRight {
+    position: relative;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-duration: 2.5s;
+    -webkit-animation-name: fadeRight;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-delay: 0s;
+    -moz-animation-duration: 2.5s;
+    -moz-animation-name: fadeRight;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-delay: 0s;
+    -o-animation-duration: 2.5s;
+    -o-animation-name: fadeRight;
+    -o-animation-fill-mode: forwards;
+    animation-delay: 0s;
+    animation-duration: 2.5s;
+    animation-name: fadeRight;
+    animation-fill-mode: forwards
+}
+
+.fadeLeft {
+    position: relative;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-duration: 2.5s;
+    -webkit-animation-name: fadeLeft;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-delay: 0s;
+    -moz-animation-duration: 2.5s;
+    -moz-animation-name: fadeLeft;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-delay: 0s;
+    -o-animation-duration: 2.5s;
+    -o-animation-name: fadeLeft;
+    -o-animation-fill-mode: forwards;
+    animation-delay: 0s;
+    animation-duration: 2.5s;
+    animation-name: fadeLeft;
+    animation-fill-mode: forwards
+}
+
+.fadeIn {
+    opacity: 1;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-duration: 3.5s;
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-delay: 0s;
+    -moz-animation-duration: 3.5s;
+    -moz-animation-name: fadeIn;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-delay: 0s;
+    -o-animation-duration: 3.5s;
+    -o-animation-name: fadeIn;
+    -o-animation-fill-mode: forwards;
+    animation-delay: 0s;
+    animation-duration: 3.5s;
+    animation-name: fadeIn;
+    animation-fill-mode: forwards
+}
+
+.fadeIn.blurbs {
+    -webkit-animation-delay: 0s;
+    -webkit-animation-duration: 3.6s;
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-delay: 0s;
+    -moz-animation-duration: 3.6s;
+    -moz-animation-name: fadeIn;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-delay: 0s;
+    -o-animation-duration: 3.6s;
+    -o-animation-name: fadeIn;
+    -o-animation-fill-mode: forwards;
+    animation-delay: 0s;
+    animation-duration: 3.6s;
+    animation-name: fadeIn;
+    animation-fill-mode: forwards
+}
+
+.static-tumblr {
+    background: #fff
+}
+
+.static-tumblr .brand {
+    color: #000
+}
+
+.static-tumblr .login {
+    color: #ccc
+}
+
+.static-tumblr .login a {
+    color: #ccc
+}
+
+.static-tumblr .login a:hover {
+    color: #aaa
+}
+
+.static-tumblr #home {
+    -webkit-animation-delay: 0s;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-name: fadeSlow;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-delay: 0s;
+    -moz-animation-duration: 3s;
+    -moz-animation-name: fadeSlow;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-delay: 0s;
+    -o-animation-duration: 3s;
+    -o-animation-name: fadeSlow;
+    -o-animation-fill-mode: forwards;
+    animation-delay: 0s;
+    animation-duration: 3s;
+    animation-name: fadeSlow;
+    animation-fill-mode: forwards
+}
+
+.static-tumblr #home h1 {
+    font-size: 130px;
+    margin: 80px 0 0 0;
+    color: #000;
+    letter-spacing: -3px
+}
+
+.static-tumblr #home p {
+    color: rgba(0, 0, 0, 0.7)
+}
+
+.static-tumblr #home p .brand {
+    color: #000
+}
+
+.static-tumblr #home .signup {
+    box-shadow: none;
+    border-bottom: none;
+    border-radius: 3px;
+    padding: 25px 50px
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .static-tumblr #home h1 {
+        margin-top: 30px;
+        font-size: 66px;
+        line-height: 70px;
+        letter-spacing: -1px
+    }
+    .static-tumblr .tumblr-credit {
+        position: static;
+        padding: 10px;
+        text-align: center
+    }
+}
+
+.shape {
+    -webkit-animation-delay: 0s;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-name: floatUp;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-delay: 0s;
+    -moz-animation-duration: 3s;
+    -moz-animation-name: floatUp;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-delay: 0s;
+    -o-animation-duration: 3s;
+    -o-animation-name: floatUp;
+    -o-animation-fill-mode: forwards;
+    animation-delay: 0s;
+    animation-duration: 3s;
+    animation-name: floatUp;
+    animation-fill-mode: forwards;
+    -webkit-animation-timing-function: linear;
+    display: inline-block;
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+    z-index: -1
+}
+
+.shape.shape-circle {
+    border-radius: 100%
+}
+
+.shape.shape-triangle {
+    width: 0 !important;
+    height: 0 !important;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    background-color: transparent !important
+}
+
+.shape.animation-1 {
+    -webkit-animation-delay: 0s;
+    -webkit-animation-duration: 3.5s;
+    -webkit-animation-name: floatUpOne;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-delay: 0s;
+    -moz-animation-duration: 3.5s;
+    -moz-animation-name: floatUpOne;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-delay: 0s;
+    -o-animation-duration: 3.5s;
+    -o-animation-name: floatUpOne;
+    -o-animation-fill-mode: forwards;
+    animation-delay: 0s;
+    animation-duration: 3.5s;
+    animation-name: floatUpOne;
+    animation-fill-mode: forwards
+}
+
+.shape.animation-2 {
+    -webkit-animation-delay: 0s;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-name: floatUpTwo;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-delay: 0s;
+    -moz-animation-duration: 3s;
+    -moz-animation-name: floatUpTwo;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-delay: 0s;
+    -o-animation-duration: 3s;
+    -o-animation-name: floatUpTwo;
+    -o-animation-fill-mode: forwards;
+    animation-delay: 0s;
+    animation-duration: 3s;
+    animation-name: floatUpTwo;
+    animation-fill-mode: forwards
+}
+
+.shape.animation-3 {
+    -webkit-animation-delay: 0s;
+    -webkit-animation-duration: 2.5s;
+    -webkit-animation-name: floatUpThree;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-delay: 0s;
+    -moz-animation-duration: 2.5s;
+    -moz-animation-name: floatUpThree;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-delay: 0s;
+    -o-animation-duration: 2.5s;
+    -o-animation-name: floatUpThree;
+    -o-animation-fill-mode: forwards;
+    animation-delay: 0s;
+    animation-duration: 2.5s;
+    animation-name: floatUpThree;
+    animation-fill-mode: forwards
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .fadeIn,
+    .fadeLeft,
+    .fadeRight {
+        -webkit-animation-delay: none;
+        -webkit-animation-duration: none;
+        -webkit-animation-name: none;
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-delay: none;
+        -moz-animation-duration: none;
+        -moz-animation-name: none;
+        -moz-animation-fill-mode: forwards;
+        -o-animation-delay: none;
+        -o-animation-duration: none;
+        -o-animation-name: none;
+        -o-animation-fill-mode: forwards;
+        animation-delay: none;
+        animation-duration: none;
+        animation-name: none;
+        animation-fill-mode: forwards
+    }
+    #home-bg {
+        background-size: 250%;
+        background-position: 50% 20px
+    }
+    .static-homepage {
+        background-size: 150%
+    }
+    .login {
+        font-size: 14px;
+        margin-top: 17px
+    }
+    .login span {
+        display: none
+    }
+    header .brand {
+        margin: 7px 0 0 5px;
+        font-size: 24px;
+        background-position: 4px 3px;
+        padding: 0 20px;
+        float: left
+    }
+    #home {
+        padding-bottom: 20px
+    }
+    #home h1 {
+        margin-top: 140px;
+        font-size: 66px;
+        line-height: 70px
+    }
+    #home p {
+        font-size: 20px;
+        line-height: 28px;
+        margin: 20px 15px 20px 15px
+    }
+    #home p .brand {
+        font-size: 20px;
+        position: relative;
+        top: 0px;
+        height: auto;
+        background: url(//ga-dash.s3.amazonaws.com/production/assets/logo-0901a3c8466759400ecb1fd4ce0cfcc115d9a227a8ed64940284762f35a0ff15.png) no-repeat;
+        background-size: 16px;
+        color: #fff;
+        font-family: "news", Georgia, serif;
+        display: inline-block;
+        margin: 0;
+        background-position: 0px 2px;
+        padding: 0 0 0 18px
+    }
+    #home .or {
+        display: block;
+        margin: 10px 0
+    }
+    #home .signup {
+        display: inline-block;
+        text-align: left;
+        font-family: "pf-din", Impact, sans-serif;
+        font-size: 18px;
+        text-decoration: none;
+        margin: 0 15px;
+        box-shadow: 0px 1px 5px #000
+    }
+    #home .signup.twitter {
+        background: #00b6b0 url(//ga-dash.s3.amazonaws.com/production/assets/twitter-9e9e373c1d8dd6d6ba3f2f9d0c03e385e900e04a5473eb8b1e545aed881f538a.png) no-repeat;
+        padding: 15px 25px 15px 45px;
+        border-bottom: 5px solid #00838e;
+        background-size: 35px;
+        background-position: 10px
+    }
+    #home .signup.twitter:hover {
+        background-color: #00a59f
+    }
+    #home .signup.email {
+        background: #FF2500 no-repeat;
+        padding: 15px 25px;
+        border-bottom: 5px solid #c20027
+    }
+    #home .signup.email:hover {
+        background-color: #dd0300
+    }
+    #home .signup.email .icon-mail {
+        font-family: 'iconic';
+        font-size: 18px;
+        position: relative;
+        bottom: 2px;
+        right: 3px
+    }
+    #home .signup.beta {
+        background: #FF2500 url(//ga-dash.s3.amazonaws.com/production/assets/twitter-9e9e373c1d8dd6d6ba3f2f9d0c03e385e900e04a5473eb8b1e545aed881f538a.png) no-repeat;
+        padding: 15px 35px 15px 45px;
+        background-size: 35px;
+        background-position: 10px;
+        border-bottom: 5px solid #c20027;
+        font-size: 18px
+    }
+    #home .signup.beta:hover {
+        background-color: #dd0300
+    }
+    .blurbs .blurb {
+        display: block;
+        float: none;
+        width: auto !important;
+        text-align: left !important;
+        margin: 0 0 10px 0 !important
+    }
+    .blurbs .blurb .blurb-img {
+        float: left !important;
+        margin: 0 10px 75px 0 !important
+    }
+    .blurbs .blurb .blurb-byline {
+        line-height: 14px !important
+    }
+    .video-embed iframe {
+        margin: 40px auto 0 auto;
+        width: 100%;
+        height: 300px
+    }
+    .soon {
+        display: none
+    }
+    #soon {
+        width: auto !important;
+        margin: 10px;
+        padding: 10px
+    }
+    #soon h1 {
+        font-size: 33px !important
+    }
+    #soon input {
+        width: 300px !important;
+        padding: 10px !important;
+        display: block;
+        margin: 5px 0 !important;
+        font-size: 18px;
+        -webkit-appearance: none;
+        -webkit-border-radius: 0
+    }
+    #soon input.user-email {
+        width: 275px !important
+    }
+}
+
+#soon {
+    text-align: left;
+    width: 601px;
+    margin: 0 auto
+}
+
+#soon h1 {
+    font-size: 60px;
+    margin-bottom: 15px;
+    font-weight: normal;
+    text-shadow: 0px 0px 3px #000
+}
+
+#soon p {
+    font-size: 20px;
+    margin-bottom: 25px;
+    text-shadow: 0px 0px 3px #000
+}
+
+.user-email {
+    display: inline-block;
+    background: #444;
+    border: 3px solid #444;
+    font-family: "news", Georgia, serif;
+    color: #fff;
+    font-size: 22px;
+    padding: 15px;
+    width: 360px;
+    margin-right: 10px
+}
+
+.user-email:focus {
+    outline: 0;
+    border-color: #888
+}
+
+.email-input .submit {
+    display: inline-block;
+    font-size: 22px;
+    padding: 15px;
+    background: #FF2500;
+    color: #fff;
+    font-family: "pf-din", Impact, sans-serif;
+    border: 3px solid #FF2500;
+    text-transform: uppercase;
+    position: relative;
+    top: 1px
+}
+
+.email-input .submit:hover {
+    background: #cc0000;
+    border-color: #cc0000;
+    cursor: pointer
+}
+
+#share .tab {
+    top: 0;
+    background: #272727
+}
+
+#share .tab #brand {
+    padding-top: 8px;
+    text-align: left;
+    position: absolute;
+    font-size: 22px;
+    background-size: 18px;
+    padding-left: 30px;
+    background-position: 8px 10px
+}
+
+#share .tab #brand span {
+    color: #777;
+    font-size: 14px
+}
+
+#share .tab .learn-more {
+    position: absolute;
+    right: 16px;
+    top: 6px;
+    background-color: #444;
+    color: #fff;
+    font-family: "pf-din", Impact, sans-serif;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    color: #ccc
+}
+
+#share .tab .learn-more:hover {
+    color: #fff;
+    background-color: #888
+}
+
+#share .tab .user-info {
+    border-top: 2px solid #393939;
+    background: #141414;
+    padding: 8px;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 40px;
+    height: 250px
+}
+
+#share .tab .user-img {
+    border-radius: 100%;
+    border: 4px #555 solid;
+    box-shadow: 0px 2px 3px #000;
+    margin-top: 10px
+}
+
+#share .tab h2 {
+    font-size: 36px;
+    margin: 0 0 2px 0;
+    padding-top: 8px;
+    text-shadow: 0px 1px 3px #000
+}
+
+#share .tab h3 {
+    margin: 0 0 18px 0;
+    font-size: 16px;
+    text-transform: none;
+    color: #777;
+    font-family: "news", Georgia, serif
+}
+
+#share .tab h3 a {
+    color: #777;
+    text-decoration: none
+}
+
+#share .tab .pitch-bg {
+    position: absolute;
+    top: 105px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    background: url(/assets/bg.jpg) no-repeat;
+    background-size: cover;
+    opacity: 0.15
+}
+
+#share .tab .pitch {
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    z-index: 100
+}
+
+#share .tab .signup {
+    background: #FF2500;
+    background-size: 30px;
+    background-position: 5px;
+    display: inline-block;
+    padding: 6px 16px;
+    font-family: "pf-din", Impact, sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 0;
+    color: #fff;
+    text-transform: uppercase
+}
+
+#share .tab .signup:hover {
+    background-color: #bb0000
+}
+
+#share .tab .tiny {
+    font-size: 12px;
+    color: #777
+}
+
+#share #editor {
+    top: 300px
+}
+
+#share #preview {
+    border-radius: 5px 0 0 5px;
+    box-shadow: -5px 0px 15px #000
+}
+
+#share .ace-tomorrow-night-eighties .ace_gutter-active-line {
+    background: none
+}
+
+#share .ace-tomorrow-night-eighties .ace_cursor {
+    display: none
+}
+
+#admin {
+    color: #fff
+}
+
+@-webkit-keyframes pulseTab {
+    0% {
+        opacity: 1
+    }
+    50% {
+        opacity: 0.5
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-moz-keyframes pulseTab {
+    0% {
+        opacity: 1
+    }
+    50% {
+        opacity: 0.5
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeRight {
+    0% {
+        opacity: 0;
+        left: -40px
+    }
+    35% {
+        opacity: 0;
+        left: -40px
+    }
+    100% {
+        opacity: 1;
+        left: 0px
+    }
+}
+
+@-moz-keyframes fadeRight {
+    0% {
+        opacity: 0;
+        left: -40px
+    }
+    35% {
+        opacity: 0;
+        left: -40px
+    }
+    100% {
+        opacity: 1;
+        left: 0px
+    }
+}
+
+@-webkit-keyframes fadeLeft {
+    0% {
+        opacity: 0;
+        left: 40px
+    }
+    35% {
+        opacity: 0;
+        left: 40px
+    }
+    100% {
+        opacity: 1;
+        left: 0px
+    }
+}
+
+@-moz-keyframes fadeLeft {
+    0% {
+        opacity: 0;
+        left: 40px
+    }
+    35% {
+        opacity: 0;
+        left: 40px
+    }
+    100% {
+        opacity: 1;
+        left: 0px
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    75% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    75% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeSlow {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-moz-keyframes fadeSlow {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes floatUpOne {
+    0% {
+        bottom: -100px;
+        opacity: 1;
+        -webkit-transform: rotate(0deg) scale(0)
+    }
+    33% {
+        -webkit-transform: rotate(66deg) scale(0.25)
+    }
+    66% {
+        -webkit-transform: rotate(132deg) scale(0.5)
+    }
+    100% {
+        opacity: 1;
+        bottom: 120%;
+        -webkit-transform: rotate(200deg) scale(0)
+    }
+}
+
+@-webkit-keyframes floatUpTwo {
+    0% {
+        bottom: -100px;
+        opacity: 1;
+        -webkit-transform: rotate(0deg) scale(1)
+    }
+    33% {
+        -webkit-transform: rotate(-66deg) scale(1.5)
+    }
+    100% {
+        opacity: 1;
+        bottom: 120%;
+        -webkit-transform: rotate(-200deg) scale(0)
+    }
+}
+
+@-webkit-keyframes floatUpThree {
+    0% {
+        bottom: -100px;
+        opacity: 1;
+        -webkit-transform: rotate(0deg) scale(1)
+    }
+    33% {
+        -webkit-transform: rotate(66deg) scale(1.3)
+    }
+    100% {
+        opacity: 1;
+        bottom: 120%;
+        -webkit-transform: rotate(300deg) scale(0)
+    }
+}
+
+.static-homepage {
+    background: #000 url(//ga-dash.s3.amazonaws.com/production/assets/bg-6a1d2e2266a68f2302176cbeb46f14cbd840c432d22a653c3cac2a980cbc5f52.jpg) no-repeat;
+    background-position: 50% 40px;
+    background-size: contain
+}
+
+@media only screen and (min-width: 1120px) {
+    .static-homepage {
+        background-position: center 10px;
+        background-size: auto
+    }
+}
+
+.static-homepage .hero {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 30px 10px;
+    text-align: center
+}
+
+.static-homepage .hero h1 {
+    color: #fff;
+    font-size: 36px;
+    line-height: 36px;
+    margin: 0;
+    max-width: 900px
+}
+
+@media only screen and (min-width: 720px) {
+    .static-homepage .hero h1 {
+        font-size: 72px;
+        line-height: 72px
+    }
+}
+
+.static-homepage .hero h2 {
+    font-family: "news", Georgia, serif;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 26px;
+    margin: 40px auto;
+    max-width: 720px;
+    text-transform: none
+}
+
+@media only screen and (min-width: 720px) {
+    .static-homepage .hero h2 {
+        font-size: 22px;
+        line-height: 32px
+    }
+}
+
+.static-homepage .hero a {
+    background: #FF2500;
+    background-position: 5px;
+    border-bottom: 3px solid #c20027;
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    font-family: "pf-din", Impact, sans-serif;
+    font-size: 22px;
+    margin: 0 auto;
+    padding: 12px 25px;
+    text-decoration: none;
+    text-transform: uppercase
+}
+
+.static-homepage .hero a:hover {
+    background-color: #bb0000
+}
+
+.static-homepage .props {
+    background: #000;
+    margin-top: 30px;
+    padding: 30px 10px;
+    text-align: center
+}
+
+@media only screen and (min-width: 720px) {
+    .static-homepage .props {
+        padding: 60px 0
+    }
+}
+
+.static-homepage .props h3 {
+    color: #fff;
+    font-size: 32px;
+    margin-bottom: 10px
+}
+
+.static-homepage .props p {
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 0;
+    margin-top: 0
+}
+
+.static-homepage .props ul {
+    list-style: none;
+    margin: 0 auto;
+    max-width: 960px;
+    overflow: hidden;
+    padding: 0
+}
+
+.static-homepage .props li {
+    margin: 0 auto 60px;
+    max-width: 300px
+}
+
+.static-homepage .props li:last-child {
+    margin-bottom: 0
+}
+
+@media only screen and (min-width: 720px) {
+    .static-homepage .props li {
+        box-sizing: border-box;
+        float: left;
+        margin: 0;
+        max-width: none;
+        padding: 2%;
+        width: 33.33333%
+    }
+}
+
+.static-homepage .video {
+    background: #000;
+    padding: 10px 10px 20px;
+    text-align: center
+}
+
+@media only screen and (min-width: 720px) {
+    .static-homepage .video {
+        padding: 0 0 50px
+    }
+}
+
+.static-homepage .video .wrapper {
+    margin: 0 auto;
+    max-width: 640px
+}
+
+.static-homepage .video .container {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    padding-top: 0;
+    position: relative
+}
+
+.static-homepage .video .container iframe,
+.static-homepage .video .container object,
+.static-homepage .video .container embed {
+    display: block;
+    height: 100%;
+    left: 0;
+    margin: 0 auto 20px;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.static-homepage .about {
+    background: #000;
+    padding: 30px 10px;
+    text-align: center
+}
+
+.static-homepage .about h2 {
+    display: block;
+    height: 55px;
+    margin: 0 auto;
+    overflow: hidden;
+    text-indent: 101%;
+    white-space: nowrap;
+    width: 237px
+}
+
+.static-homepage .about p {
+    font-size: 16px;
+    line-height: 26px;
+    margin: 20px auto 40px;
+    max-width: 580px
+}
+
+.static-homepage .about p a {
+    color: #ccc;
+    text-decoration: underline
+}
+
+.static-homepage .about p a:hover {
+    color: #fff
+}
