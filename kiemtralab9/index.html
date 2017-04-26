@@ -1,0 +1,117 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thư viện Đại học Tôn Đức Thăng</title>
+    <style>
+        .container {
+            width: 700px;
+            margin: 0 auto;
+        }
+        
+        h1,
+        h2 {
+            text-align: center;
+        }
+        
+        table {
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+        
+        input,
+        input:focus {
+            border: none;
+            border-bottom: 1px dashed;
+            padding-left: 5px;
+        }
+        
+        input.full {
+            width: 80%;
+        }
+        
+        ol li {
+            margin-bottom: 5px;
+        }
+        
+        body {
+            color: darkblue;
+        }
+        
+        h1 {
+            font-weight: 100;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>TRƯỜNG ĐẠI HỌC TÔN ĐỨC THẮNG</h1>
+            <H2>THƯ VIỆN</H2>
+            <H2>PHIẾU ĐĂNG KÝ MƯỢN LIÊN THƯ VIỆN</H2>
+        </header>
+        <section>
+            <form action="index.php" method="get">
+                <div>
+                    <h3>I. Thông tin dành cho người mượn</h3>
+                    <ol>
+                        <li>Họ và tên: <input type="text" class="full" name="ten"></li>
+                        <li>Khoa/Đơn vị: <input type="text" class="full" name="khoa"></li>
+                        <li>Đối tượng: Giảng viên<input type="radio" value="1" name="doituong"> Sinh viên<input type="radio" value="2" name="doituong"> Học viên SĐH<input type="radio" value="3" name="doituong"> Viên chức<input type="radio" value="4" name="doituong"></li>
+                        <li>Số thẻ: <input type="text" class="full" name="sothe"></li>
+                        <li>Địa chỉ email: <input type="email" name="email">Điện thoại liên lạc: <input type="text" name="dienthoai"></li>
+                        <li>Thông tin tài liệu đăng ký mượn:
+                            <table border="1px">
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Nhan đề</th>
+                                    <th>Tác giả</th>
+                                    <th>Năm xuất bản</th>
+                                    <th>Tên thư viện</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td><input type="text" name="nhande1"></td>
+                                    <td><input type="text" name="tacgia1"></td>
+                                    <td><input type="number" name="namxuatban1"></td>
+                                    <td><input type="text" name="tenthuvien1"></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><input type="text" name="nhande2"></td>
+                                    <td><input type="text" name="tacgia2"></td>
+                                    <td><input type="number" name="namxuatban2"></td>
+                                    <td><input type="text" name="tenthuvien2"></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td><input type="text" name="nhande3"></td>
+                                    <td><input type="text" name="tacgia3"></td>
+                                    <td><input type="number" name="namxuatban3"></td>
+                                    <td><input type="text" name="tenthuvien3"></td>
+                                </tr>
+                            </table>
+                        </li>
+                        Tôi xin cam đoan thực hiện đúng quy định khi sử dụng dịch vụ này.
+                    </ol>
+                </div>
+                <div>
+                    <h3>II. Thông tin dành cho Chuyên viên thư viện</h3>
+                    <ul>
+                        <li>Đã thu phí dịch vụ <input type="checkbox" name="thuphi">Số tiền: <input type="number" name="sotien"></li>
+                        <li>Ngày hẹn giao tài liệu: <input type="date" name="ngaygiao"></li>
+                    </ul>
+                    Chân thành cảm ơn
+                </div>
+
+                <button type="submit">Gửi</button>
+            </form>
+        </section>
+
+
+    </div>
+</body>
+
+</html>

@@ -1,4 +1,6 @@
 <?php
+require_once ('classes/class.database.php');
+require_once ('classes/class.dataobject.php');
 class Project extends DataObject {
     function __construct(){
         parent::__construct();

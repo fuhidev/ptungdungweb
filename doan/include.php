@@ -6,4 +6,4 @@
  * Time: 00:03
  */
 require_once ('classes/class.database.php');
-require_once ('classes/class.dataobject.php.php');
+require_once ('classes/class.dataobject.php');

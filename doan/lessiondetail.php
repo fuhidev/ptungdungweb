@@ -1,3 +1,13 @@
+<?php
+
+    if(isset($_GET['id'])){
+        $id = $_GET['id'];
+        require_once('classes/class.lessiondetail.php');
+        $ldl = LessionDetail::getById($id);
+        print_r($ldl);
+    }
+
+?>
 <html>
 
 <head>
