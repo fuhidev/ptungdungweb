@@ -1,10 +1,10 @@
 <?php
-
+ require_once('classes/class.lessiondetail.php');
+ require_once('classes/class.lession.php');
     if(isset($_GET['id'])){
         $id = $_GET['id'];
-        require_once('classes/class.lessiondetail.php');
-        $ldl = LessionDetail::getById($id);
-        print_r($ldl);
+       
+        $ldl = LessionDetail::getByLessionId($id);
     }
 
 ?>
@@ -13,13 +13,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 
     <!--    <script src="editor.js"></script>-->
     <!--    Slide-->
     <link rel="stylesheet" href="css/slide.css">
-    <script src="js/slider.js"></script>
+    
 
 
 </head>
@@ -28,6 +28,11 @@
     <div class="workspace">
         <div id="slider">
             <div class="content" style="max-width:800px">
+            <?php
+            foreach($ldl as $key => $value) {
+                ?>
+                <img alt='<?php echo $value->pattern ?>' src="<?php echo $value->img ?>" class="mySlides">
+            <?php } ?>
             </div>
             <div class="center">
                 <div class="section">
@@ -39,7 +44,7 @@
         </div>
         <pre id="editor"></pre>
 
-        <script src="js/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/aceeditor/ace.js" type="text/javascript" charset="utf-8"></script>
         <script>
 
 
@@ -48,10 +53,9 @@
     <div class="preview">
         <div id="view"></div>
     </div>
+    <script src="js/slider.js"></script>
     <script>
-        loadImage(imgs);
         showDivs(slideIndex);
-        var code = document.getElementById('coder');
         var view = document.getElementById('view');
         //    code.onkeyup = function (event) {
         //        view.innerHTML = code.value;
@@ -70,6 +74,7 @@
         });
 
     </script>
+    
 </body>
 
 </html>

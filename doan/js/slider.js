@@ -1,35 +1,11 @@
-var slideIndex = 1,
+var slideIndex = 1;
+var imgs = document.getElementsByClassName('mySlides');
 
-    imgs = [];
-for (var i = 1; i <= 29; i++) {
-    imgs.push(
-        {
-            id:i,
-            re:i==12?/(<h1>)(\w?)+(<\/h1>)/:i==14?/(<p>)(\w?)+(<\/p>)/:i==19?/(<input)[\s\w]*( type="email")([\s\w]*)(>)/:i==23?/(<input)[\s\w]*( type="submit")([\s\w]*)(>)/:i==27?/(<input)[\s\w]*( type="email")([\s\w]*)( placeholder="Your email")([\s\w]*)(>)/:undefined,
-         img:'img/lession/1/' + i + '.jpg'
-        });
-}
-
-function loadImage(images) {
-    var content = document.getElementsByClassName('content')[0];
-
-    images.forEach(function (value, key) {
-        var img = document.createElement('img');
-        img.src = value.img;
-        img.className = "mySlides";
-        content.appendChild(img);
-    });
-
-}
-
-function findSlide(obj) {
+function findSlide(index) {
     var a = imgs;
-    for (var i = 0; i < a.length; i++) {
-        if (a[i].id === obj) {
-            return a[i];
-        }
-    }
-    return undefined;
+    if(index > a.length - 1 || index < 0)
+        return undefined;
+    return a[index - 1];
 }
 
 function plusDivs(n) {
@@ -42,7 +18,7 @@ function currentDiv() {
 
 function showDivs(n) {
     var i;
-    var x = document.getElementsByClassName("mySlides");
+    var x = imgs;
 
     if (n > x.length || n < 1) {
         return;
@@ -57,10 +33,17 @@ function showDivs(n) {
     var span = document.getElementById('numslide');
     span.innerText = [slideIndex, '/', imgs.length].join('');
     var slide = findSlide(n);
-    if (slide != undefined && slide.re != undefined) {
-            document.getElementById('next').style.visibility = checkCoder(slide.re)?"":"hidden";
+    if (slide != undefined && slide.alt != "") {
+            document.getElementById('next').style.visibility = checkCoder(slide.alt)?"":"hidden";
 
     }else{
          document.getElementById('next').style.visibility ="";
     }
+}
+function checkCoder(pattern) {
+    "use strict";
+    var value = editor.getSession().getValue();
+    var re = new RegExp(pattern);
+    var result = re.test(value);
+ return result;
 }

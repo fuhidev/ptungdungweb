@@ -5,18 +5,7 @@ class Lession extends DataObject {
         parent::__construct();
     }
     public static function getAll(){
-        $query = "select * from lession";
-        $stm = Database::getInstance()->prepare($query);
-        $stm->execute();
-        $project = array();
-        while ($p = $stm->fetchObject(__CLASS__)) {
-            $project[] = $p;
-        }
-        return $project;
-
-    }
-    public static function getByProjectId($id){
-        $query = "select * from lession where projectId=".$id;
+        $query = "select * from user";
         $stm = Database::getInstance()->prepare($query);
         $stm->execute();
         $project = array();
@@ -27,7 +16,13 @@ class Lession extends DataObject {
 
     }
     public static function getById($id){
-        $query = "select * from lession where id=".$id;
+        $query = "select * from user where id=".$id;
+        $stm = Database::getInstance()->prepare($query);
+        $stm->execute();
+        return $stm->fetchObject(__CLASS__);
+    }
+    public static function isExist($username,$password){
+        $query = "select * from user where username=".$username."and password=".$password;
         $stm = Database::getInstance()->prepare($query);
         $stm->execute();
         return $stm->fetchObject(__CLASS__);

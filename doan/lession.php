@@ -49,23 +49,18 @@
 
                         <div class="project-parts">
                             <?php
-                            $str_lessions = preg_split("/[,]/",$value->lessions);
-
-                            if(!empty($str_lessions)){
+                            $lessions = Lession::getByProjectId($value->id);
+                            
                             $i = 1;
-                            foreach($str_lessions as $key1=>$value1){
-                                if($value1 == 0)
-                                    break;
-                                $lession = Lession::getById(intval($value1));
+                            foreach($lessions as $key1=>$lession){
                             ?>
-                            <a class="project-part
-          " href="/projects/annas-website-1">
+                            <a class="project-part" href=<?php echo "lessiondetail.php?id=".$lession->id ?>>
                                 <span class="checkbox"></span>
                                 <span class="project-part-name"><?php echo $i.". ". $lession->name ?></span>
                             </a>
                             <?php
                             $i++;
-                            }} ?>
+                            } ?>
                             <div class="clearfix"></div>
                             <a data-confirm="You will lose all progress for this project, are you sure?" class="button danger" href="/reset-project/annas-website">Restart</a>
                         </div>

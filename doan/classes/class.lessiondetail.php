@@ -21,5 +21,15 @@ class LessionDetail extends DataObject {
         $stm->execute();
         return $stm->fetchObject(__CLASS__);
     }
+    public static function getByLessionId($id){
+        $query = "select * from lessiondetail where lessionId=".$id;
+        $stm = Database::getInstance()->prepare($query);
+        $stm->execute();
+        $result = array();
+        while ($p = $stm->fetchObject(__CLASS__)) {
+            $result[] = $p;
+        }
+        return $result;
+    }
 }
 ?>
